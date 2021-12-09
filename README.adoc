@@ -1,0 +1,12 @@
+
+= C++ Programming Notes 
+
+== Setup
+
+== First program
+
+[source,cpp]
+.hello_world.cpp
+----
+include::hello_world.cpp[]
+----
