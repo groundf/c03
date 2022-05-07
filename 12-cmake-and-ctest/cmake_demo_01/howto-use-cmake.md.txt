@@ -1,0 +1,173 @@
+# PŘEHLED
+
++ Co je to CMAke
++ Instalace CMake
+  - Windows
+  - MacOS
+
+KOMPILACE pomocí CMAKE na Windows
+
+Pokud spustíme cmake --help dostaneme seznam dostupných přepínačů se stručným popisem.
+Hned na začátku se vidíme vzor jak volat CMake:
+
+```
+cmake [options] <path-to-source>
+cmake [options] <path-to-existing-build>
+```
+
+První možnost je pro generování nových souborů.
+Druhá možnost je pro re-generování již existujících souborů.
+
+
+V kořenovém adresáři projektu by se měl nacházet soubor `CMakeLists.txt`.
+Vytvoříme v kořenovém adresáři projektu podadresář `build`, kde se vygenrují všechny soubory nutné ke kompilaci.
+Jestli to bude Makefile nebo Visual Studo Solution je na nás ... ale prozatím necháme Cmake, ketrý z anás vybere VS Solution.
+Cmake provede generování souborů v adresáři ve kterém ho voláme, proto, pokud nechceme adresář zaneřádit všemi souboru, ketré budou generovány,
+pak máme dvě možnosti. Přemístit se např. do adresáře build přímo a z něj zavola o úroveň výše umístěný CmakeListst.txt, nebou použít přepínač a 
+zavolat cmake přímo z kořenového adresáře.
+	
+První možnost:
+
+```shell
+$ cd build\	
+$ cmake ../CmakeLists.txt
+```
+
+Zde využijem nedokuemntovaný přepínač -B a -H
+`-H` je cesta k CMAkeLists.txt, pakliže bysme chtěli zada cestu.
+`-B` je cesta do adresáře,kam bude CMake generovat soubory.
+Druhá možnost:
+
+POZOR mezera mezi -B a názvem adresáře je chybou! 
+Vzor je tedy -Bfolder_name
+
+```shell
+$ cmake -Bbuild -H.
+```
+
+POZOR: Musíme zadat oba přepínače, jinak bude CMake hledat CMakeLists.txt zřejmě v build adresáři.
+
+#### Generátor
+
+Pokud chceme specifikovat typ generátoru provedeme to pomocí přepínače `-G` a názvu uzavřeným v uvozovkám jako textový řetězec.
+
+```shell
+$ cmake -Bbuild -H. -G "NMake Makefiles"
+```
+
+nebo 
+
+```shell
+$ cmake -Bbuild -H. -G " Visual Studio 14 2015 Win64"
+```
+
+POZOR: Musíme nejdříve smazat vše v adresáři build, pokud tam již josu soubory jiného typu.
+```shell
+CMake Error: Error: generator : Visual Studio 14 2015
+Does not match the generator used previously: NMake Makefiles
+Either remove the CMakeCache.txt file and CMakeFiles directory or choose a different binary directory.
+```
+
+### BUILD
+
+Pomocí MSBuild
+
+```shell
+ MSBuild {project_name}.sln /property:Configuration=Release /property:Platform=x64
+```
+
+Pomocí NMAke
+
+```
+nmake ... todo
+```
+
+## JEDNODUCHÉ WORKFLOW
+
+```shell
+cd build
+cmake ..
+cmake --build .
+ctest -VV
+```
+
+## Přehled funkcí
+
+### `find_package`
+
+https://cmake.org/cmake/help/v3.0/command/find_package.html
+
+Funkce `find_package(<package>)` se pokusí nalézt balíček zadaného jména a nastaví hodnotu proměnné <package>_FOUND, která vrací `true`, pokud byl balíček nalezen, v opačném případě `false`.
+
+#### Příklady
+
+```shell
+find_package(OpenGL REQUIRED)
+```
+
+```shell
+find_package(OpenGL QUIET)
+_if(NOT OpenGL_FOUND)
+    message("...")
+endif()
+```
+
+## Jednoduché workflow s CMAKE
+
+Vytvoříme CMakeLists.txt, příklad níže...
+
+V kořenovém adresáři se souborem CMakeLists.txt
+spustíme příkaz, který vygeneruje soubory 
+potřebné pro kompilaci do adresáře build.
+
+    $ cmake -H. -Bbuild
+
+Spustíme sestavení pomocí příkazu níže. Vše se 
+sestaví v zadaném adresáři (build); Build systém
+bude vybrán automaticky, apkliže nespecifikujeme jinak.
+
+    $ cmake --build build
+
+CMAKE_BINARY_DIR
+CMAKE_SOURCE_DIR
+EXECUTABLE_OUTPUT_PATH
+LIBRARY_OUTPUT_PATH
+PROJECT_NAME
+PROJECT_SOURCE_DIR
+
+
+## Jednoduché workflow s QMAKE
+Qt Creator rozumí dvěma systémemům CMake & QMake.
+Ukážeme si jak vytvořit projekt v obou těchto systémech, s tím, že CMake je
+trochu vícve flexibilní.
+
+CMakeLists.txt
+
+```shell
+FILE(GLOB_RECURSE LibFiles "include/*")
+add_custom_target(headers SOURCES ${LibFiles})
+```
+
+---
+
+## Použití modulu `ExternalProject`
+
+CMake modul s názvem `ExternalProject` umožňuje pracovat s externím projektem uloženým např. na github.com, který je schopný případně stáhnout a sestavit.
+Abychom mohli použít tento modul, musíme ho do souboru `CMakeLists.txt` nejprve vložit a poté můžeme použít jednu z jeho funkcí `ExternalProject_Add()`.
+
+### Přidání externího projektu
+
+```shell
+include(ExternalProject)
+
+ExternalProject_Add(
+    <project_name>
+    git_repository "<project_repository_url"
+    git_tag "<git_tag_commit_or_branch>"
+    update_command = ""
+    install_command = ""
+)
+```
+
+### Export target 
+

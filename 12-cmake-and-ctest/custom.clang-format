@@ -1,0 +1,6 @@
+﻿---
+BasedOnStyle: Google
+Standard: Cpp11
+UseTab: Never
+
+...

@@ -1,0 +1,10 @@
+^C:\USERS\DLANDA\PROJECTS\PERSONAL\CMAKE-EXAMPLES\01-BASIC\A-HELLO-CMAKE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dlanda/Projects/Personal/cmake-examples/01-basic/A-hello-cmake -BC:/Users/dlanda/Projects/Personal/cmake-examples/01-basic/A-hello-cmake --check-stamp-file C:/Users/dlanda/Projects/Personal/cmake-examples/01-basic/A-hello-cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

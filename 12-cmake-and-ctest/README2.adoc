@@ -1,0 +1,21 @@
+# C++ Project Templates
+
+- https://github.com/onqtam/awesome-cmake
+
+## Static Library
+
+    cmake -B build . -G "Visual Studio 16 2019 -A x64" 
+    cmake --build build --target hello_lib --config Debug | Release
+    cmake --build build --target hello_app --config Debug | Release
+
+    Mode                LastWriteTime         Length Name
+    ----                -------------         ------ ----
+    -a----       11/23/2020  10:46 PM          17408 hello_app.exe
+    -a----       11/23/2020  10:46 PM          34178 hello_lib.lib
+
+## Dynamic Library
+
+    cmake -Bbuild . -G "Visual Studio 16 2019 -A x64" 
+    cmake --build build --target hello_lib --config Debug | Release
+    cmake --build build --target hello_app --config Debug | Release
+
