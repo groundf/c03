@@ -1,5 +1,7 @@
 # C & C++
 
+## STL -- Standard Template Library
+
 ## Basic Language Course
 
 - Control structures
@@ -19,7 +21,7 @@
   - How to make static library (statically linkable)
   - How to make shared library (dynamically linkable)
 
-- User Defined Types -- struct & class
+- User Defined Types: structures & classes
   - What is struct
   - What is class
   - What is difference between struct and class
@@ -37,9 +39,16 @@
  - containers
  - iterators
 
-## Algorithms and Data Structures
+## STL Algorithms and Data Structures
+
+&hellip;
 
 ## CMake Course
+
+- How to compile and link simple program
+- How to make static library (statically linkable)
+- How to make shared library (dynamically linkable)
+
 
 All examples can be build with these command.
 
