@@ -1,10 +1,11 @@
-extends: default.liquid
-
+---
 title: Struktura projektu v jazyce C++
 date: 24 December 2016 21:25:00 +0200
 tags: C++, project management
 lang: cs
 ---
+
+# Projekt
 
 Práce s C/C++ projekty je z mého pohledu  od odts náročnější než s projekty v jiných jazycích. 
 Za prvé není zcela přeně dáno jak strukturovat projekt a navíc C/C++ nemá žádného správce závislostí 

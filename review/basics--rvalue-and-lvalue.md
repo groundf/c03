@@ -1,4 +1,7 @@
-## C++ 11  R-Value reference
+---
+title: R & L Values
+---
+# C++ 11  R-Value reference
 
 V C++ můžeme parametr funkci předat jako hodnotu nebo referenci.
 

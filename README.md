@@ -1,54 +1,68 @@
-# C & C++
+---
+title: C++ language and CMake course
+---
 
-## STL -- Standard Template Library
+# C++ language, STL and CMake course
 
-## Basic Language Course
+__To learn C++ in depth is really hard!__
+
+## C++ language
+
+- First steps
+ - source (`.cpp`) files, header files (`.hpp`)
+ - compilation  `g++ --std=c++2a <source> -o <ooutput>`
+ - modules (`.ixx`) (C++20)
+ - console input/output `<iostream>`
 
 - Control structures
-  - branches
+  - conditions (branching)
    - `if` statement
      - simple `if` statement
      - chained `if` statement
      - nested `if` statement
    - `switch` statement
-   - loops
+   - iterations (lopping/cycles)
      - `while`
-     - `for`
-   - range-based-loop (C++)
+     - `for` with counter
+     - `for` with iterator
+   - range-based-loop (C++20)
 
-- Compiling
-  - How to compile and link simple program
-  - How to make static library (statically linkable)
-  - How to make shared library (dynamically linkable)
+- Compilation and Linking: gcc, clang, msvc
+  - compile and link simple program
+  - compile and link static library (statically linkable)
+  - compile and link shared library (dynamically linkable)
 
 - User Defined Types: structures & classes
-  - What is struct
-  - What is class
-  - What is difference between struct and class
-  - How to inherit from another struct
-  - How to inherit from another class
+  - struct vs class: private vs public,
+  - inheritance: public, private
+  - explicit/default constructor & default destructor
+  - deleted constructor, destructor
 
-- Pointers
+- Pointers & References
+
+- Copy & Move Semantics
+  - L, R values
 
 - Templates
-  - What is template class?
-  - What is template parameter?
-  - What is template argument?
+  - class and function template, selcialization, SFINAE
+    - template parameter
+    - template argument
 
-- Standard Template Library (STL)
- - containers
- - iterators
+- Concepts (C++20), Traits (C++11)
 
-## STL Algorithms and Data Structures
+## C++ Standard Template Library (STL)
 
-&hellip;
+C++ STL data structures and algorithms.
 
-## CMake Course
+- containers
+- iterators
 
-- How to compile and link simple program
-- How to make static library (statically linkable)
-- How to make shared library (dynamically linkable)
+## CMake
 
+- Compilation and Linking: gcc, clang, msvc
+  - compile and link simple program
+  - compile and link static library (statically linkable)
+  - compile and link shared library (dynamically linkable)
 
 All examples can be build with these command.
 
@@ -69,23 +83,16 @@ cmake --build build --target 01_demo --config Debug
 cmake --build build --target 01_demo --config Release
 ```
 
-### cmake01_flatstructure
+### Examples
 
-Project with flat structure without `src` or `include` directories.
+- cmake01_flatstructure: Project with flat structure without `src` or `include` directories.
+- cmake02_subdirectories: Project with `src` and `include` subdirectories.
+- cmake03_staticlibrary: Project with binary and linked static library.
+- cmake03_sharedlibrary: Project with binary and linked shared library.
 
-### cmake02_subdirectories
+### Notes
 
-Project with `src` and `include` subdirectories.
-
-### cmake03_staticlibrary
-
-Project with binary and linked static library.
-
-### cmake03_sharedlibrary [WIP]
-
-Project with binary and linked shared library.
-
-### CMake output
+The standard CMake output
 
 ```
 $ cmake --build build --target 02_demo --config Release
@@ -146,7 +153,7 @@ FinalizeBuildStatus:
   Probíhá aktualizace časového razítka pro 02_demo.dir\Release\02_demo.tlog\02_demo.lastbuildstate.
 Sestavení projektu C:\Users\dlanda\projects\personal\cmake-templates\02_demo\build\02_demo.vcxproj (s výchozími c íli) bylo dokončeno.
 
-``
+```
 
 ## Resources
 

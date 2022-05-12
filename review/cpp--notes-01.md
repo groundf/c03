@@ -54,9 +54,9 @@ double s2 = sqrt(2); 		// call sqrt() with the argument double{2}
 double s3 = sqrt(“three”);	// error: sqrt() requires an argument of type double
 double sqrt(double d);	// return the square root of d
 double square(double);	// return the square of the argument
- 
 
-Typy, proměnné 
+
+Typy, proměnné
 každý název a výraz má typ, který určuje, jaká operace může být provedena
 např.:      int inch;
 inch je typu int
@@ -194,16 +194,12 @@ an object must be initialized before it is used and will be destroyed at the end
 
 Constants
 
-const: 
-“I promise not to change this value” 
+const:
+“I promise not to change this value”
 primarily used to specify interfaces
-constexpr: 
+constexpr:
 “to be evaluated at compile time”
 primarily used to specify constants
 to allow placement of data in read-only memory
 a function must be rather simple, just a return statement computing a value
 for non-constant arguments, but than the result is not a constant expression
-
-
-
-

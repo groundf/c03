@@ -95,3 +95,4 @@ __The modern C99+ language course.__
 ## References
 
 - Modern C and What We Can Learn From It, https://www.youtube.com/watch?v=QpAhX-gsHMs
+- https://docs.microsoft.com/en-us/cpp/c-language/static-assert-c?view=msvc-170
