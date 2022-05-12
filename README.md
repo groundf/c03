@@ -38,6 +38,10 @@ __To learn C++ in depth is really hard!__
   - explicit/default constructor & default destructor
   - deleted constructor, destructor
 
+- Enumarations
+ - `enum` vs `enum class`
+
+
 - Pointers & References
 
 - Copy & Move Semantics
@@ -157,4 +161,13 @@ Sestavení projektu C:\Users\dlanda\projects\personal\cmake-templates\02_demo\bu
 
 ## Resources
 
+- C++ reference https://en.cppreference.com/w/
+- C++ core guidelines, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 - https://cppinsights.io/s/35155190
+- https://devblogs.microsoft.com/cppblog/moving-a-project-to-cpp-named-modules/
+
+- Bjarne Stroustrup
+- Herb Sutter
+- Scott Meyers
+- Alexander Alexandrescu
+- Alexander Stepanov
