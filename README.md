@@ -165,6 +165,7 @@ Sestavení projektu C:\Users\dlanda\projects\personal\cmake-templates\02_demo\bu
 - C++ core guidelines, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 - https://cppinsights.io/s/35155190
 - https://devblogs.microsoft.com/cppblog/moving-a-project-to-cpp-named-modules/
+- https://www.jetbrains.com/help/clion/quick-cmake-tutorial.htm
 
 - Bjarne Stroustrup
 - Herb Sutter
