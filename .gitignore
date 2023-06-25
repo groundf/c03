@@ -2,8 +2,8 @@
 # Created by https://www.gitignore.io/api/cmake,c++
 # Edit at https://www.gitignore.io/?templates=cmake,c++
 
-
-build
+external/ # libraries
+build/
 
 ### C++ ###
 # Prerequisites
