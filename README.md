@@ -1,4 +1,6 @@
-# C, C++, STL, CMake course
+# c03
+
+C, C++, STL, CMake course
 
 ## Overview
 
