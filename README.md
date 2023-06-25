@@ -1,19 +1,15 @@
----
-title: C++ language and CMake course
----
+# C, C++, STL, CMake course
 
-# C++ language, STL and CMake course
+## Overview
 
-__To learn C++ in depth is really hard!__
-
-## C++ language
-
-- First steps
+<details>
+<summary>C/C++</summary>
+ 
+ - First steps
  - source (`.cpp`) files, header files (`.hpp`)
  - compilation  `g++ --std=c++2a <source> -o <ooutput>`
  - modules (`.ixx`) (C++20)
  - console input/output `<iostream>`
-
 - Control structures
   - conditions (branching)
    - `if` statement
@@ -26,42 +22,35 @@ __To learn C++ in depth is really hard!__
      - `for` with counter
      - `for` with iterator
    - range-based-loop (C++20)
-
 - Compilation and Linking: gcc, clang, msvc
   - compile and link simple program
   - compile and link static library (statically linkable)
   - compile and link shared library (dynamically linkable)
-
 - User Defined Types: structures & classes
   - struct vs class: private vs public,
   - inheritance: public, private
   - explicit/default constructor & default destructor
   - deleted constructor, destructor
-
 - Enumarations
  - `enum` vs `enum class`
-
-
 - Pointers & References
-
 - Copy & Move Semantics
   - L, R values
-
 - Templates
   - class and function template, selcialization, SFINAE
     - template parameter
     - template argument
-
 - Concepts (C++20), Traits (C++11)
+- C++ Standard Template Library (STL)
+  STL data structures and algorithms.
+  - containers
+  - iterators
 
-## C++ Standard Template Library (STL)
+</details>
 
-C++ STL data structures and algorithms.
-
-- containers
-- iterators
-
-## CMake
+<details>
+ 
+<summary>CMake</summary>
 
 - Compilation and Linking: gcc, clang, msvc
   - compile and link simple program
@@ -87,14 +76,10 @@ cmake --build build --target 01_demo --config Debug
 cmake --build build --target 01_demo --config Release
 ```
 
-### Examples
-
 - cmake01_flatstructure: Project with flat structure without `src` or `include` directories.
 - cmake02_subdirectories: Project with `src` and `include` subdirectories.
 - cmake03_staticlibrary: Project with binary and linked static library.
 - cmake03_sharedlibrary: Project with binary and linked shared library.
-
-### Notes
 
 The standard CMake output
 
@@ -156,8 +141,10 @@ FinalizeBuildStatus:
   Probíhá odstraňování souboru 02_demo.dir\Release\02_demo.tlog\unsuccessfulbuild.
   Probíhá aktualizace časového razítka pro 02_demo.dir\Release\02_demo.tlog\02_demo.lastbuildstate.
 Sestavení projektu C:\Users\dlanda\projects\personal\cmake-templates\02_demo\build\02_demo.vcxproj (s výchozími c íli) bylo dokončeno.
-
 ```
+
+</details>
+
 
 ## Resources
 
