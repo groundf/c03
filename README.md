@@ -1,29 +1,29 @@
 # c03
 
-C, C++, STL, CMake course
+C++ and CMake course
 
 ## Overview
 
 <details>
 <summary>C/C++</summary>
- 
- - First steps
- - source (`.cpp`) files, header files (`.hpp`)
- - compilation  `g++ --std=c++2a <source> -o <ooutput>`
- - modules (`.ixx`) (C++20)
- - console input/output `<iostream>`
+
+- First steps
+- source (`.cpp`) files, header files (`.hpp`)
+- compilation  `g++ --std=c++2a <source> -o <ooutput>`
+- modules (`.ixx`) (C++20)
+- console input/output `<iostream>`
 - Control structures
   - conditions (branching)
-   - `if` statement
-     - simple `if` statement
-     - chained `if` statement
-     - nested `if` statement
-   - `switch` statement
-   - iterations (lopping/cycles)
-     - `while`
-     - `for` with counter
-     - `for` with iterator
-   - range-based-loop (C++20)
+  - `if` statement
+    - simple `if` statement
+    - chained `if` statement
+    - nested `if` statement
+  - `switch` statement
+  - iterations (lopping/cycles)
+    - `while`
+    - `for` with counter
+    - `for` with iterator
+  - range-based-loop (C++20)
 - Compilation and Linking: gcc, clang, msvc
   - compile and link simple program
   - compile and link static library (statically linkable)
@@ -34,7 +34,7 @@ C, C++, STL, CMake course
   - explicit/default constructor & default destructor
   - deleted constructor, destructor
 - Enumarations
- - `enum` vs `enum class`
+- `enum` vs `enum class`
 - Pointers & References
 - Copy & Move Semantics
   - L, R values
@@ -51,7 +51,7 @@ C, C++, STL, CMake course
 </details>
 
 <details>
- 
+
 <summary>CMake</summary>
 
 - Compilation and Linking: gcc, clang, msvc
@@ -147,14 +147,13 @@ Sestavení projektu C:\Users\dlanda\projects\personal\cmake-templates\02_demo\bu
 
 </details>
 
-
 ## Resources
 
-- C++ reference https://en.cppreference.com/w/
-- C++ core guidelines, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
-- https://cppinsights.io/s/35155190
-- https://devblogs.microsoft.com/cppblog/moving-a-project-to-cpp-named-modules/
-- https://www.jetbrains.com/help/clion/quick-cmake-tutorial.htm
+- C++ reference <https://en.cppreference.com/w/>
+- C++ core guidelines, <https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines>
+- <https://cppinsights.io/s/35155190>
+- <https://devblogs.microsoft.com/cppblog/moving-a-project-to-cpp-named-modules/>
+- <https://www.jetbrains.com/help/clion/quick-cmake-tutorial.htm>
 
 - Bjarne Stroustrup
 - Herb Sutter
