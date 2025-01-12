@@ -1,6 +1,6 @@
-# c03
+# Systems Programming
 
-C++ and CMake course
+C, C++, Make, CMake, Embedded Systems, Operating Systems, Hardware and Low-Level Stuff
 
 ## Overview
 
